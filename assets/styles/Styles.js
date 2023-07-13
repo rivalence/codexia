@@ -58,5 +58,41 @@ export const styles = StyleSheet.create({
         height: 40,
         width: 40,
         alignItems: 'center'
+    },
+    homeModalContainer: {
+        flex: 1,
+        justifyContent: 'center',
+        alignItems: 'center',
+        backgroundColor: colors.backgroundModal
+    },
+
+    homeModalContent: {
+        height: "50%",
+        width: "80%",
+        backgroundColor: colors.app,
+        borderRadius: 10,
+        alignItems: 'center'
+    },
+    homeModalText: {
+        padding: 25,
+        height: "90%"
+    },
+
+    homeModalButtonContainer: {
+        flexDirection: 'row',
+        flex: 1,
+        width: "100%",
+        alignItems: 'flex-end',
+    },
+
+    homeModalButton: {
+        width: "50%",
+        flex: 1,
+        alignItems: 'center',
+        backgroundColor: colors.button
+    }, 
+    homeModalButtonText: {
+        fontSize: 15,
+        padding: 10
     }
 })

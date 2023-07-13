@@ -6,9 +6,12 @@ import {
 import React from 'react'
 import { styles } from '../../../assets/styles/Styles'
 
-const PlayButton = () => {
+const PlayButton = ({setShowModalDemo}) => {
   return (
-    <Pressable style={styles.homePlayButton}>
+    <Pressable 
+      style={styles.homePlayButton}
+      onPress={() => setShowModalDemo(true)}
+    >
       <View style={styles.homePlayButtonContainer}>
         <Text style={styles.homeTextPlayButton}>Débuter l'aventure Codexia</Text>
       </View>

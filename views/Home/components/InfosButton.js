@@ -5,19 +5,20 @@ import {
     } from 'react-native'
 import React from 'react'
 import { styles } from '../../../assets/styles/Styles'
+import { QuestionIcon, ContractIcon } from '../../../assets/Icons'
 
 const InfosButton = () => {
   return (
     <View style={styles.homeInfosButtonContainer}>
         <Pressable>
             <View style={styles.homeInfosButton}>
-                <Text>?</Text>
+                <QuestionIcon />
             </View>
         </Pressable>
         
         <Pressable>
             <View style={styles.homeInfosButton}>
-                <Text>?</Text>
+                <ContractIcon />
             </View>
         </Pressable>
     </View>
