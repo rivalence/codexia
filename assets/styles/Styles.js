@@ -1,47 +1,54 @@
 import { 
     StyleSheet
 } from 'react-native'
-import {colors} from '../constants/Constants'
+import {colors, css} from '../Constants'
 
 export const styles = StyleSheet.create({
     container : {
-        paddingTop: 40,
         flex: 1, 
         alignItems: 'center',
+        backgroundColor: colors.app
+    },
+
+    // TextDesign.js
+    appText: {
+        fontFamily: 'Julee',
+        fontSize: 20
     },
     headerApp : {
-        paddingTop: 30,
-        justifyContent: 'center',
-        alignItems: 'center'
+        paddingTop: 10,
+        alignItems: 'center',
     },
     textHeader : {
         fontSize: 40,
-        fontWeight: 'bold'
+        fontWeight: 'bold',
+        fontFamily: 'Irish Grover',
+        color: "#ffffff",
     },
-    appColor : {
-        backgroundColor: colors.app
-    },
+
+    // BodyDecoration
     homeLogo : {
         height: 200,
         width: 200
     },
     homeBodyDecoration : {
         paddingTop: 200,
-        alignItems: 'center'
+        alignItems: 'center',
     },
+
+    //PlayButton.js
     homePlayButtonContainer: {
         justifyContent: 'center',
         alignItems: 'center'
     },
     homePlayButton : {
         backgroundColor: colors.button,
-        padding: 20,
+        padding: css.paddingContent,
         margin: 30,
-        borderRadius: 10,
+        borderRadius: css.radiusButton,
     },
-    homeTextPlayButton: {
-        fontSize: 20
-    },
+
+    //InfoButton.js
     homeInfosButtonContainer: {
         flex: 1,
         flexDirection: 'row',
@@ -50,8 +57,8 @@ export const styles = StyleSheet.create({
         
     },
     homeInfosButton: {
-        padding: 10,
-        borderRadius: 20,
+        padding: css.paddingContent / 3,
+        borderRadius: css.radiusButton * 2,
         backgroundColor: colors.button,
         margin: 10,
         marginBottom: 20,
@@ -59,6 +66,8 @@ export const styles = StyleSheet.create({
         width: 40,
         alignItems: 'center'
     },
+
+    //ModalDemo.js
     homeModalContainer: {
         flex: 1,
         justifyContent: 'center',
@@ -69,12 +78,12 @@ export const styles = StyleSheet.create({
     homeModalContent: {
         height: "50%",
         width: "80%",
-        backgroundColor: colors.app,
-        borderRadius: 10,
+        backgroundColor: colors.backgroundContent,
+        borderRadius: css.radiusButton,
         alignItems: 'center'
     },
     homeModalText: {
-        padding: 25,
+        padding: css.paddingContent,
         height: "90%"
     },
 
@@ -93,6 +102,61 @@ export const styles = StyleSheet.create({
     }, 
     homeModalButtonText: {
         fontSize: 15,
-        padding: 10
+        padding: css.paddingContent / 2
+    },
+
+    //Heading.js
+    gameHeadingContainer: {
+        flexDirection: 'row',
+        justifyContent: 'center',
+        columnGap: 20,
+        marginTop: 50
+    },
+    gameHeadingTextContainer: {
+        width: "70%",
+        backgroundColor: colors.backgroundContent,
+        alignItems: 'center',
+        borderRadius: css.radiusContent
+    },
+    gameHeadingText: {
+        padding: css.paddingContent / 2,
+        fontSize: 23
+    },
+    gameHeadingIconContainer: {
+        justifyContent: 'center'
+    },
+    
+    //BodyGame.js
+    gameBodyContainer: {
+        marginTop: 20,
+        borderRadius: css.radiusContent,
+        flexDirection: 'column',
+        rowGap: 5,
+        padding: css.paddingContent,
+        alignItems: 'center',
+        backgroundColor: colors.backgroundContent,
+        height: "55%"
+    },
+    gameBodyContentContainer: {
+        height: "80%",
+        width: "90%",
+        alignItems: 'center'
+    },
+    gameBodyAnswerContainer: {
+        width: "80%",
+    },
+    gameBodyinputText : {
+        borderWidth: 1,
+        height: 40,
+        borderRadius: css.radiusContent,
+        marginTop: 5,
+        marginBottom: 5,
+        width: "90%"
+    },
+    gameBodyInputContainer: {
+        flexDirection: 'row',
+        columnGap: 10,
+        justifyContent: 'center',
+        alignItems: 'center'
     }
 })

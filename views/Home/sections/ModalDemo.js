@@ -1,14 +1,16 @@
 import { 
     View,
-    Text,
     Modal,
     TouchableOpacity } from 'react-native'
-import React from 'react'
+import React, { useState } from 'react'
 import {  } from 'react-native'
 import { styles } from '../../../assets/styles/Styles'
-import { colors } from '../../../assets/constants/Constants'
+import { MyAppText } from '../../../assets/TextDesign'
 
 const ModalDemo = ({showModalDemo, setShowModalDemo}) => {
+    const etape_demo = ["Text 1", "Text 2"]
+
+    const [countEtape, setCountEtape] = useState(0)
 
     //Rendu principal
     return (
@@ -24,25 +26,30 @@ const ModalDemo = ({showModalDemo, setShowModalDemo}) => {
                 <View
                     style={styles.homeModalContent}
                 >
-                    <Text
-                        style={styles.homeModalText}
+                    <MyAppText
+                        design={styles.homeModalText}
                     >
-                        Lorhefbvu urvhbbvr" uhbvbyb"
-                    </Text>
+                        {etape_demo[countEtape]}
+                    </MyAppText>
                     <View
                         style={styles.homeModalButtonContainer}
                     >
                         <TouchableOpacity 
                             style={styles.homeModalButton}
+                            onPress={() => setCountEtape(countEtape + 1)}
+                        >
+                            <MyAppText 
+                                design={styles.homeModalButtonText}
                             >
-                            <Text style={styles.homeModalButtonText}>Suivant</Text>
+                                {etape_demo.length == countEtape + 1 ? "Commencer à jouer" : "Suivant"}
+                            </MyAppText>
                         </TouchableOpacity>
 
                         <TouchableOpacity 
                             style={styles.homeModalButton}
                             onPress={() => setShowModalDemo(false)}    
                         >
-                            <Text style={styles.homeModalButtonText}>Passer la démo</Text>
+                            <MyAppText design={styles.homeModalButtonText}>Passer la démo</MyAppText>
                         </TouchableOpacity>
                     </View>
                 </View>
