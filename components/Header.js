@@ -1,7 +1,6 @@
 import { View, Text } from 'react-native'
-import { styles } from '../../../assets/styles/Styles'
-import {MyHeaderText} from '../../../assets/TextDesign'
-import { Entypo } from '@expo/vector-icons';
+import { styles } from '../assets/styles/Styles'
+import {MyHeaderText} from '../assets/TextDesign'
 
 const Header = () => (
     <View>

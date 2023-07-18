@@ -1,10 +1,10 @@
 import React, {useState} from 'react'
 import { View } from "react-native"
-import Header from './components/Header'
-import BodyDecoration from './components/BodyDecoration'
-import PlayButton from './components/PlayButton'
-import InfosButton from './components/InfosButton'
-import ModalDemo from './components/ModalDemo'
+import Header from '../../components/Header'
+import BodyDecoration from './sections/BodyDecoration'
+import PlayButton from './sections/PlayButton'
+import InfosButton from './sections/InfosButton'
+import ModalDemo from './sections/ModalDemo'
 
 const Home = () => {
     const [showModalDemo, setShowModalDemo] = useState(false)
