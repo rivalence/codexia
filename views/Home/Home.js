@@ -5,19 +5,23 @@ import BodyDecoration from './sections/BodyDecoration'
 import PlayButton from './sections/PlayButton'
 import InfosButton from './sections/InfosButton'
 import ModalDemo from './sections/ModalDemo'
+import { styles } from '../../assets/styles/Styles'
 
-const Home = () => {
+const Home = ({navigation}) => {
     const [showModalDemo, setShowModalDemo] = useState(false)
 
     return (
-        <View>
+        <View style={[styles.container, styles.appColor]}>
             <ModalDemo 
                 showModalDemo={showModalDemo}
                 setShowModalDemo={setShowModalDemo}
             />
             <Header />
             <BodyDecoration />
-            <PlayButton setShowModalDemo={setShowModalDemo}/>
+            <PlayButton 
+                setShowModalDemo={setShowModalDemo}
+                navigation={navigation}
+            />
             <InfosButton />
         </View> 
   )

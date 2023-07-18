@@ -1,15 +1,12 @@
 import { 
     StyleSheet
 } from 'react-native'
-import {colors, css} from '../../constants/Constants'
+import {colors, css} from '../Constants'
 
 export const styles = StyleSheet.create({
     container : {
-        paddingTop: 40,
         flex: 1, 
         alignItems: 'center',
-    },
-    appColor : {
         backgroundColor: colors.app
     },
 
@@ -19,7 +16,7 @@ export const styles = StyleSheet.create({
         fontSize: 20
     },
     headerApp : {
-        paddingTop: 30,
+        paddingTop: 10,
         alignItems: 'center',
     },
     textHeader : {
@@ -60,7 +57,7 @@ export const styles = StyleSheet.create({
         
     },
     homeInfosButton: {
-        padding: css.paddingContent / 2,
+        padding: css.paddingContent / 3,
         borderRadius: css.radiusButton * 2,
         backgroundColor: colors.button,
         margin: 10,
@@ -112,11 +109,11 @@ export const styles = StyleSheet.create({
     gameHeadingContainer: {
         flexDirection: 'row',
         justifyContent: 'center',
-        columnGap: 15,
+        columnGap: 20,
         marginTop: 50
     },
     gameHeadingTextContainer: {
-        width: "80%",
+        width: "70%",
         backgroundColor: colors.backgroundContent,
         alignItems: 'center',
         borderRadius: css.radiusContent
@@ -138,7 +135,7 @@ export const styles = StyleSheet.create({
         padding: css.paddingContent,
         alignItems: 'center',
         backgroundColor: colors.backgroundContent,
-        height: "60%"
+        height: "55%"
     },
     gameBodyContentContainer: {
         height: "80%",

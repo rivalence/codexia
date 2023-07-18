@@ -1,18 +1,26 @@
 import React from 'react';
-import { View } from 'react-native'
 import Home from './views/Home/Home'
-import { styles } from './assets/styles/Styles'
 import Game from './views/Game/Game';
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
-export default function App() {
+const Stack = createNativeStackNavigator()
+
+function App() {
   return (
-    <View 
-      style={[
-        styles.appColor, 
-        styles.container]}
-        >
-      <Game />
-    </View>
-    
+    <NavigationContainer>
+      <Stack.Navigator initialRouteName='Home'>
+        <Stack.Screen 
+          name='Home' 
+          component={Home}
+        />
+        <Stack.Screen 
+          name='Game' 
+          component={Game}
+        />
+      </Stack.Navigator>
+    </NavigationContainer>
   );
 }
+
+export default App
