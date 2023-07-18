@@ -2,6 +2,7 @@ import React from 'react';
 import { View } from 'react-native'
 import Home from './views/Home/Home'
 import { styles } from './assets/styles/Styles'
+import Game from './views/Game/Game';
 
 export default function App() {
   return (
@@ -10,7 +11,7 @@ export default function App() {
         styles.appColor, 
         styles.container]}
         >
-      <Home />
+      <Game />
     </View>
     
   );

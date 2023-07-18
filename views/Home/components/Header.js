@@ -1,10 +1,12 @@
 import { View, Text } from 'react-native'
 import { styles } from '../../../assets/styles/Styles'
+import {MyHeaderText} from '../../../assets/TextDesign'
+import { Entypo } from '@expo/vector-icons';
 
 const Header = () => (
     <View>
       <View style={styles.headerApp}>
-        <Text style={styles.textHeader}>Codexia</Text>
+        <MyHeaderText>CODEXIA</MyHeaderText>
       </View>
     </View>
 )

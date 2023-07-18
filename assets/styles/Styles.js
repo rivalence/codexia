@@ -1,7 +1,7 @@
 import { 
     StyleSheet
 } from 'react-native'
-import {colors} from '../constants/Constants'
+import {colors} from '../../constants/Constants'
 
 export const styles = StyleSheet.create({
     container : {
@@ -9,17 +9,22 @@ export const styles = StyleSheet.create({
         flex: 1, 
         alignItems: 'center',
     },
+    appColor : {
+        backgroundColor: colors.app
+    },
+    appText: {
+        fontFamily: 'Julee',
+        fontSize: 20
+    },
     headerApp : {
         paddingTop: 30,
-        justifyContent: 'center',
-        alignItems: 'center'
+        alignItems: 'center',
     },
     textHeader : {
         fontSize: 40,
-        fontWeight: 'bold'
-    },
-    appColor : {
-        backgroundColor: colors.app
+        fontWeight: 'bold',
+        fontFamily: 'Irish Grover',
+        color: "#ffffff",
     },
     homeLogo : {
         height: 200,
@@ -27,7 +32,7 @@ export const styles = StyleSheet.create({
     },
     homeBodyDecoration : {
         paddingTop: 200,
-        alignItems: 'center'
+        alignItems: 'center',
     },
     homePlayButtonContainer: {
         justifyContent: 'center',
@@ -38,9 +43,6 @@ export const styles = StyleSheet.create({
         padding: 20,
         margin: 30,
         borderRadius: 10,
-    },
-    homeTextPlayButton: {
-        fontSize: 20
     },
     homeInfosButtonContainer: {
         flex: 1,
@@ -69,7 +71,7 @@ export const styles = StyleSheet.create({
     homeModalContent: {
         height: "50%",
         width: "80%",
-        backgroundColor: colors.app,
+        backgroundColor: colors.backgroundContent,
         borderRadius: 10,
         alignItems: 'center'
     },

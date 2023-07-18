@@ -1,10 +1,10 @@
 import {
      View, 
-     Text,
      Pressable
     } from 'react-native'
 import React from 'react'
 import { styles } from '../../../assets/styles/Styles'
+import { MyAppText } from '../../../assets/TextDesign'
 
 const PlayButton = ({setShowModalDemo}) => {
   return (
@@ -13,7 +13,7 @@ const PlayButton = ({setShowModalDemo}) => {
       onPress={() => setShowModalDemo(true)}
     >
       <View style={styles.homePlayButtonContainer}>
-        <Text style={styles.homeTextPlayButton}>Débuter l'aventure Codexia</Text>
+        <MyAppText>Débuter l'aventure Codexia</MyAppText>
       </View>
     </Pressable>
   )
